@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+
         //프래그먼트 리스트 생성
         val fragmentList = listOf(ListFragment(), LikeFragment(), UserFragment())
 
@@ -31,8 +32,8 @@ class MainActivity : AppCompatActivity() {
             tab.text = tabTitles[position]
         }.attach()
 
-        //setFragment()
     }
+
 
 
 

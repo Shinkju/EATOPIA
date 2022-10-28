@@ -1,8 +1,14 @@
 package com.greedy.eatopia
 
+import android.content.Intent
+import android.view.LayoutInflater
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
+import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.greedy.eatopia.databinding.ActivityDetailBinding
+import com.greedy.eatopia.databinding.RecyclerListBinding
 
 class FragmentAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapter(fragmentActivity) {
 
@@ -19,4 +25,49 @@ class FragmentAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapter
     override fun createFragment(position: Int): Fragment {
         return fragmentList.get(position)   //fragmentList의 위치를 찾아서 반환한다.
     }
+}
+
+
+
+class FragmentAdapterNew(var postList: List<Row?>) : RecyclerView.Adapter<PostHolder>() {
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostHolder {
+        return PostHolder(RecyclerListBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+    }
+
+    override fun getItemCount(): Int {
+        return if (postList == null) 0 else postList!!.size
+    }
+
+    override fun onBindViewHolder(viewHolder: PostHolder, position: Int) {
+        val item = postList!![position]
+        viewHolder.setItem(item)
+    }
+
+}
+
+
+
+// 리스트를 볼수 있도록 뿌려주는 구문
+class PostHolder(val binding: RecyclerListBinding) : RecyclerView.ViewHolder(binding.root) {
+
+    lateinit var data: Row
+
+    //
+    init {  //요기는 디테일 쪽~
+        binding.root.setOnClickListener {
+            val intent = Intent(it.context, ActivityDetailBinding::class.java)
+            //intent.putExtra("dataName", data.bplcnm)
+            it.context.startActivity(intent)
+        }
+    }
+
+    //화면 구성을 위해 디바이스 위에 데이터를 뿌려주는 코드
+    fun setItem(data: Row?) {
+        //binding.bplcnm.text = "${data?.bplcnm}. ${data?.bplcnm}"
+        //binding.sntuptaenm.text = "${data?.sntuptaenm}. ${data?.sntuptaenm}"
+
+        this.data = data!!
+    }
+
 }
