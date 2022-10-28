@@ -25,22 +25,24 @@ class FragmentAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapter
     override fun createFragment(position: Int): Fragment {
         return fragmentList.get(position)   //fragmentList의 위치를 찾아서 반환한다.
     }
+
+
 }
 
 
 
-class FragmentAdapterNew(var postList: List<Row?>) : RecyclerView.Adapter<PostHolder>() {
+class FragmentAdapterNew(var dataList: List<Row?>) : RecyclerView.Adapter<PostHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostHolder {
         return PostHolder(RecyclerListBinding.inflate(LayoutInflater.from(parent.context), parent, false))
     }
 
     override fun getItemCount(): Int {
-        return if (postList == null) 0 else postList!!.size
+        return if (dataList == null) 0 else dataList!!.size
     }
 
     override fun onBindViewHolder(viewHolder: PostHolder, position: Int) {
-        val item = postList!![position]
+        val item = dataList!![position]
         viewHolder.setItem(item)
     }
 
@@ -51,23 +53,25 @@ class FragmentAdapterNew(var postList: List<Row?>) : RecyclerView.Adapter<PostHo
 // 리스트를 볼수 있도록 뿌려주는 구문
 class PostHolder(val binding: RecyclerListBinding) : RecyclerView.ViewHolder(binding.root) {
 
-    lateinit var data: Row
+    lateinit var row: Row
 
     //
-    init {  //요기는 디테일 쪽~
+    /*init {  //요기는 디테일 쪽~
         binding.root.setOnClickListener {
             val intent = Intent(it.context, ActivityDetailBinding::class.java)
-            //intent.putExtra("dataName", data.bplcnm)
+            intent.putExtra("dataName", row.BPLCNM)
             it.context.startActivity(intent)
         }
-    }
+    }*/
 
     //화면 구성을 위해 디바이스 위에 데이터를 뿌려주는 코드
-    fun setItem(data: Row?) {
-        //binding.bplcnm.text = "${data?.bplcnm}. ${data?.bplcnm}"
-        //binding.sntuptaenm.text = "${data?.sntuptaenm}. ${data?.sntuptaenm}"
+    fun setItem(row: Row?) {
 
-        this.data = data!!
+        row?.let {
+        binding.title.text = row.BPLCNM
+        binding.foodList.text = row.UPTAENM
+        }
+        //this.row = row!!
     }
 
 }

@@ -18,7 +18,7 @@ class DetailActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         //postId 조회
-        val postId = intent.getIntExtra("postId", 0)
+        //val postId = intent.getIntExtra("postId", 0)
       /*  loadData(postId)*/
 
     }
