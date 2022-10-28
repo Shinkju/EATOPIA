@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Eatopia</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragmet">Hello blank fragment</string>
 </resources>
