@@ -14,16 +14,7 @@
             android:theme="@style/Theme.Eatopia"
             tools:targetApi="31">
         <activity
-                android:name=".storeDetail.DetailActivity"
-                android:exported="false"/>
-        <activity
-                android:name=".storeList.StoreListActivity"
-                android:exported="false"/>
-        <activity
-                android:name=".like.LikeActivity"
-                android:exported="false"/>
-        <activity
-                android:name=".user.UserActivity"
+                android:name=".DetailActivity"
                 android:exported="false"/>
         <activity
                 android:name=".MainActivity"
