@@ -1,4 +1,4 @@
-package com.greedy.eatopia.storeDetail
+package com.greedy.eatopia
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
