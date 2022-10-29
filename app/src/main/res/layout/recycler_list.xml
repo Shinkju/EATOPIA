@@ -1,22 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="100dp"
-              tools:context=".ListFragment" >
-    <TextView
-            android:text="매장명"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/title"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.217" app:layout_constraintVertical_bias="0.506"/>
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/foodList"
-            android:text="음식종류"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.688" app:layout_constraintVertical_bias="0.506"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="320dp"
+              android:layout_height="150dp"
+              android:layout_marginLeft="50dp"
+              android:layout_marginTop="30dp"
+              tools:layout_editor_absoluteX="50dp"
+              android:orientation="horizontal"
+              tools:context=".ListFragment">
+    <ImageView
+            android:layout_width="170dp"
+            android:layout_height="150dp"
+            app:srcCompat="@mipmap/ic_launcher"
+            android:id="@+id/image_category"/>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TextView
+                android:text="매장 이름"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/title"/>
+        <TextView
+                android:text="음식 종류"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/foodList"/>
+
+        <TextView
+                android:text="도로명 주소"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:id="@+id/address"/>
+        <TextView
+                android:text="전화 번호"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:id="@+id/tell"/>
+        <!--<TextView
+                android:text="3.0"
+                android:id="@+id/textRating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"/>-->
+        <RatingBar
+                android:text="3.0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ratingBar"
+                android:layout_marginTop="3dp"
+                android:numStars="5"
+                android:stepSize="0.1"
+                android:progressTint="#FF3600"
+                android:backgroundTint="#FF3600"
+                android:gravity="center_horizontal"
+                style="@style/Widget.AppCompat.RatingBar.Small"/>
+
+    </LinearLayout>
+</LinearLayout>

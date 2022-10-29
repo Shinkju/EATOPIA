@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         binding.viewPager.adapter = adapter
 
         /* TabLayout 추가 시 작성 - 변경불가(var) */
-        var tabTitles = listOf<String>("맛집 리스트", "즐겨찾기", "내 정보")
+        var tabTitles = listOf<String>("맛집 리스트", "오늘의 날씨", "내 정보")
 
         //TabLayout과 viewPager 연결
         TabLayoutMediator(binding.tabLayout2, binding.viewPager) { tab, position ->

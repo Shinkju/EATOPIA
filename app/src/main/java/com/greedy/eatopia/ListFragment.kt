@@ -5,10 +5,12 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RatingBar
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.greedy.eatopia.databinding.FragmentList2Binding
+import com.greedy.eatopia.databinding.RecyclerListBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -28,12 +30,28 @@ class ListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        /* --------------------------- 태익 --------------------------*/
+        val v = inflater.inflate(R.layout.recycler_list, container, false)
+
         // Inflate the layout for this fragment
         recyclerView = binding.postsView
         loadData()
         recyclerView.layoutManager = LinearLayoutManager(this.context)
         initScrollListener()
+
+        /* --------------------------- 태익 --------------------------*/
+        //val textRating: TextView = v.findViewById(R.id.textRating)
+        val ratingBar: RatingBar = v.findViewById(R.id.ratingBar)
+
+       /* ratingBar.onRatingBarChangeListener  =
+            RatingBar.OnRatingBarChangeListener {
+                    ratingBar, rating, fromUser ->
+                textRating.text="$rating 점"
+            }*/
+
         return binding.root
+
+
     }
 
     // API를 요청하는 코드
