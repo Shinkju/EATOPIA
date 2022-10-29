@@ -53,13 +53,13 @@ class FragmentAdapterNew(var dataList: List<Row?>) : RecyclerView.Adapter<PostHo
 // 리스트를 볼수 있도록 뿌려주는 구문
 class PostHolder(val binding: RecyclerListBinding) : RecyclerView.ViewHolder(binding.root) {
 
-    lateinit var row: Row
+     lateinit var row : Row
 
-    //
-    /*init {  //요기는 디테일 쪽~
+    // 디테일 화면 넘어가는 코드
+    /*init {
         binding.root.setOnClickListener {
-            val intent = Intent(it.context, ActivityDetailBinding::class.java)
-            intent.putExtra("dataName", row.BPLCNM)
+            val intent = Intent(it.context, DetailActivity::class.java)
+            intent.putExtra("BPLCNM", row.BPLCNM)
             it.context.startActivity(intent)
         }
     }*/
@@ -70,8 +70,10 @@ class PostHolder(val binding: RecyclerListBinding) : RecyclerView.ViewHolder(bin
         row?.let {
         binding.title.text = row.BPLCNM
         binding.foodList.text = row.UPTAENM
+        binding.address.text = row.SITEWHLADDR
+        binding.tell.text = row.SITETEL
         }
-        //this.row = row!!
+        this.row = row!!
     }
 
 }
