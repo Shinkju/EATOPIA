@@ -5,6 +5,24 @@
       <map>
         <entry key="..\:/Lecture/Toy_Eatopia-master/Toy_Eatopia-master/project-eatopia/app/src/main/res/layout/activity_like.xml" value="0.34739583333333335" />
         <entry key="..\:/Lecture/Toy_Eatopia-master/Toy_Eatopia-master/project-eatopia/app/src/main/res/layout/activity_main.xml" value="0.3515625" />
+        <entry key="..\:/Users/hi/Desktop/Eatopia/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2275" />
+        <entry key="..\:/Users/hi/Desktop/Eatopia/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2275" />
+        <entry key="..\:/Users/hi/Desktop/Eatopia/app/src/main/res/drawable/login_button.xml" value="0.225" />
+        <entry key="..\:/Users/hi/Desktop/Eatopia/app/src/main/res/layout/activity_detail.xml" value="0.33" />
+        <entry key="..\:/Users/hi/Desktop/Eatopia/app/src/main/res/layout/activity_join.xml" value="0.33" />
+        <entry key="..\:/Users/hi/Desktop/Eatopia/app/src/main/res/layout/activity_join2.xml" value="0.31979166666666664" />
+        <entry key="..\:/Users/hi/Desktop/Eatopia/app/src/main/res/layout/activity_login.xml" value="0.29375" />
+        <entry key="..\:/Users/hi/Desktop/Eatopia/app/src/main/res/layout/activity_login2.xml" value="0.334375" />
+        <entry key="..\:/Users/hi/Desktop/Eatopia/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/hi/Desktop/Eatopia/app/src/main/res/layout/activity_main_login.xml" value="0.1" />
+        <entry key="..\:/Users/hi/Desktop/Eatopia/app/src/main/res/layout/activity_result.xml" value="0.31979166666666664" />
+        <entry key="..\:/Users/hi/Desktop/Eatopia/app/src/main/res/layout/activity_signup.xml" value="0.34791666666666665" />
+        <entry key="..\:/Users/hi/Desktop/Eatopia/app/src/main/res/layout/fragment_like.xml" value="0.22604166666666667" />
+        <entry key="..\:/Users/hi/Desktop/Eatopia/app/src/main/res/layout/fragment_list.xml" value="0.33" />
+        <entry key="..\:/Users/hi/Desktop/Eatopia/app/src/main/res/layout/fragment_login.xml" value="0.1" />
+        <entry key="..\:/Users/hi/Desktop/Eatopia/app/src/main/res/layout/fragment_user.xml" value="0.1" />
+        <entry key="..\:/Users/hi/Desktop/Eatopia/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2275" />
+        <entry key="..\:/Users/hi/Desktop/Eatopia/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.165" />
         <entry key="..\:/Users/hi/Desktop/lecture-kj/workspace/Last/app/src/main/res/layout/activity_detail.xml" value="0.33" />
         <entry key="..\:/Users/hi/Desktop/lecture-kj/workspace/Last/app/src/main/res/layout/activity_main.xml" value="0.3515625" />
         <entry key="..\:/Users/hi/Desktop/lecture-kj/workspace/Last/app/src/main/res/layout/fragment_detail.xml" value="0.33" />
@@ -23,5 +41,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.24444444444444444" />
+      </ProjectState>
+    </option>
   </component>
 </project>

@@ -1,20 +1,24 @@
 package com.greedy.eatopia
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.android.material.tabs.TabLayoutMediator
+import com.google.firebase.auth.FirebaseAuth
 import com.greedy.eatopia.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
     val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
+    private lateinit var auth: FirebaseAuth
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
         //프래그먼트 리스트 생성
-        val fragmentList = listOf(ListFragment(), LikeFragment(), UserFragment())
+        val fragmentList = listOf(ListFragment(), LikeFragment(), loginFragment())
 
         //프래그먼트 어댑터 생성 및 저장
         val adapter = FragmentAdapter(this)
@@ -32,7 +36,14 @@ class MainActivity : AppCompatActivity() {
         }.attach()
 
         //setFragment()
+
+
     }
+
+
+
+
+
 
 
 
