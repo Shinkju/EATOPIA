@@ -30,7 +30,7 @@ class ListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        /* --------------------------- 태익 --------------------------*/
+
         val v = inflater.inflate(R.layout.recycler_list, container, false)
 
         // Inflate the layout for this fragment
@@ -39,7 +39,7 @@ class ListFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(this.context)
         initScrollListener()
 
-        /* --------------------------- 태익 --------------------------*/
+
         val ratingBar: RatingBar = v.findViewById(R.id.ratingBar)
 
        ratingBar.onRatingBarChangeListener  =

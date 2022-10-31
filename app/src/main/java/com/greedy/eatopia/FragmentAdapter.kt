@@ -56,7 +56,7 @@ class PostHolder(val binding: RecyclerListBinding) : RecyclerView.ViewHolder(bin
      lateinit var row : Row
 
     // 디테일 화면 넘어가는 코드
-    /*init {
+  /*  init {
         binding.root.setOnClickListener {
             val intent = Intent(it.context, DetailActivity::class.java)
             intent.putExtra("BPLCNM", row.BPLCNM)
