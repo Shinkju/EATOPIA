@@ -2,6 +2,7 @@ package com.greedy.eatopia
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 import com.greedy.eatopia.databinding.ActivityMainBinding
 
@@ -12,7 +13,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-
 
         //프래그먼트 리스트 생성
         val fragmentList = listOf(ListFragment(), LikeFragment(), UserFragment())

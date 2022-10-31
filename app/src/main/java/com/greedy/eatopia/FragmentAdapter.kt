@@ -27,6 +27,7 @@ class FragmentAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapter
     }
 
 
+
 }
 
 
@@ -70,6 +71,7 @@ class PostHolder(val binding: RecyclerListBinding) : RecyclerView.ViewHolder(bin
         row?.let {
         binding.title.text = row.BPLCNM
         binding.foodList.text = row.UPTAENM
+        binding.address.text = row.SITEWHLADDR
         }
         //this.row = row!!
     }

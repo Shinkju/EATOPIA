@@ -5,6 +5,8 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RatingBar
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -23,17 +25,30 @@ class ListFragment : Fragment() {
     private lateinit var dataList: List<Row>
     private var isLoading = false
 
-
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
+
     ): View? {
+
+        val v = inflater.inflate(R.layout.recycler_list, container, false)
+
         // Inflate the layout for this fragment
         recyclerView = binding.postsView
         loadData()
         recyclerView.layoutManager = LinearLayoutManager(this.context)
         initScrollListener()
+
+        val ratingBar: RatingBar = v.findViewById(R.id.ratingBar)
+
+        ratingBar.onRatingBarChangeListener  =
+            RatingBar.OnRatingBarChangeListener {
+                ratingBar, rating, fromUser ->
+        }
+
         return binding.root
+
     }
 
     // API를 요청하는 코드
