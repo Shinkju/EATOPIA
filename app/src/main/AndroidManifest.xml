@@ -4,6 +4,7 @@
           package="com.greedy.eatopia">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
             android:usesCleartextTraffic="true"
@@ -28,6 +29,17 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <!--위젯
+        <receiver android:name="WeatherAppWidgetProvider" android:enabled="true" android:exported="true" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                       android:resource="@xml/weather_appwidget_info" />
+        </receiver>
+        -->
+
     </application>
 
 </manifest>
