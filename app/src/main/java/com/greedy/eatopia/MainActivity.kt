@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
 
         //프래그먼트 리스트 생성
-        val fragmentList = listOf(ListFragment(), LikeFragment(), UserFragment())
+        val fragmentList = listOf(ListFragment(), WeatherFragment(), UserFragment())
 
         //프래그먼트 어댑터 생성 및 저장
         val adapter = FragmentAdapter(this)
