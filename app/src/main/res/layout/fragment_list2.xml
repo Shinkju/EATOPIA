@@ -14,24 +14,4 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintVertical_bias="1.0"/>
-    <Spinner
-            android:layout_width="96dp"
-            android:layout_height="48dp" android:id="@+id/spinner"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="@+id/postsView"
-            app:layout_constraintHorizontal_bias="0.977"
-            android:layout_marginBottom="456dp"
-            tools:ignore="SpeakableTextPresentCheck"/>
-    <TextView
-            android:text="메뉴"
-            android:textSize="24dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/foodList"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.899"
-            android:layout_marginBottom="464dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

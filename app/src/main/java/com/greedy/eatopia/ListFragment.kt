@@ -40,14 +40,12 @@ class ListFragment : Fragment() {
         initScrollListener()
 
         /* --------------------------- 태익 --------------------------*/
-        //val textRating: TextView = v.findViewById(R.id.textRating)
         val ratingBar: RatingBar = v.findViewById(R.id.ratingBar)
 
-       /* ratingBar.onRatingBarChangeListener  =
+       ratingBar.onRatingBarChangeListener  =
             RatingBar.OnRatingBarChangeListener {
                     ratingBar, rating, fromUser ->
-                textRating.text="$rating 점"
-            }*/
+            }
 
         return binding.root
 
