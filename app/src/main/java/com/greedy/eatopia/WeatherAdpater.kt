@@ -26,7 +26,7 @@ class WeatherAdapter (var items : Array<ModelWeather>) : RecyclerView.Adapter<We
         fun setItem(item : ModelWeather){
             binding.tvTime.text = item.fcstTime + "시 날씨"
             binding.tvRainType.text = getRainType(item.rainType)
-            binding.tvHumidity.text = item.humidity
+            binding.tvHumidity.text = item.humidity + "%"
             binding.tvSky.text = getSky(item.sky)
             binding.tvTemp.text = item.temp + "°"
         }
