@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
 
         //프래그먼트 리스트 생성
-        val fragmentList = listOf(ListFragment(), WeatherFragment(), UserFragment())
+        val fragmentList = listOf(ListFragment(), WeatherFragment())
 
         //프래그먼트 어댑터 생성 및 저장
         val adapter = FragmentAdapter(this)
@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         binding.viewPager.adapter = adapter
 
         /* TabLayout 추가 시 작성 - 변경불가(var) */
-        var tabTitles = listOf<String>("맛집 리스트", "오늘의 날씨", "내 정보")
+        var tabTitles = listOf<String>("맛집 리스트", "오늘의 날씨")
 
         //TabLayout과 viewPager 연결
         TabLayoutMediator(binding.tabLayout2, binding.viewPager) { tab, position ->

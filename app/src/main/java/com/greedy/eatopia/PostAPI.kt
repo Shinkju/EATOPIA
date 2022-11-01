@@ -9,9 +9,6 @@ interface PostAPI {
     @GET("{startNum}/{endNum}")
     suspend fun row(@Path("startNum") startNum: Int = 1, @Path("endNum") endNum: Int = 50) : Response<RestaurantResponse>
 
-    //Post 1개 상세 조회
-    @GET("{startNum}/{endNum}/{name}")
-    suspend fun rows(@Path("name") name : String): Response<RestaurantResponse>
 
 
 

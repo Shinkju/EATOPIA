@@ -3,6 +3,8 @@ package com.greedy.eatopia
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.app.ActivityCompat.startActivityForResult
+import androidx.core.content.ContextCompat.startActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
@@ -53,25 +55,31 @@ class FragmentAdapterNew(var dataList: List<Row?>) : RecyclerView.Adapter<PostHo
 // 리스트를 볼수 있도록 뿌려주는 구문
 class PostHolder(val binding: RecyclerListBinding) : RecyclerView.ViewHolder(binding.root) {
 
-     lateinit var row : Row
+    lateinit var row : Row
 
-    // 디테일 화면 넘어가는 코드
-  /*  init {
-        binding.root.setOnClickListener {
+    init {
+        binding.root.setOnClickListener{
             val intent = Intent(it.context, DetailActivity::class.java)
-            intent.putExtra("BPLCNM", row.BPLCNM)
+            intent.apply {
+                this.putExtra("title", row.BPLCNM)
+                this.putExtra("foodList", row.UPTAENM)
+                this.putExtra("tell", row.SITETEL)
+                this.putExtra("address", row.SITEWHLADDR)
+            }
             it.context.startActivity(intent)
         }
-    }*/
+    }
+
+
 
     //화면 구성을 위해 디바이스 위에 데이터를 뿌려주는 코드
     fun setItem(row: Row?) {
 
         row?.let {
-        binding.title.text = row.BPLCNM
-        binding.foodList.text = row.UPTAENM
-        binding.address.text = row.SITEWHLADDR
-        binding.tell.text = row.SITETEL
+            binding.title.text = row.BPLCNM
+            binding.foodList.text = row.UPTAENM
+            binding.address.text = row.SITEWHLADDR
+            binding.tell.text = row.SITETEL
         }
         this.row = row!!
     }

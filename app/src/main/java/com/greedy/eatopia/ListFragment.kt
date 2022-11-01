@@ -10,7 +10,6 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.greedy.eatopia.databinding.FragmentList2Binding
-import com.greedy.eatopia.databinding.RecyclerListBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -42,10 +41,11 @@ class ListFragment : Fragment() {
 
         val ratingBar: RatingBar = v.findViewById(R.id.ratingBar)
 
-       ratingBar.onRatingBarChangeListener  =
+        ratingBar.onRatingBarChangeListener  =
             RatingBar.OnRatingBarChangeListener {
                     ratingBar, rating, fromUser ->
             }
+
 
         return binding.root
 
@@ -97,31 +97,4 @@ class ListFragment : Fragment() {
         })
     }
 
-
-    //데이터 조회 시 추가 조건 (화면에 보여지는 조건)
-//    private fun loadMore() {
-//
-//        CoroutineScope(Dispatchers.Main).launch {
-//            //토탈(150개) 보다 작으면 계속 20개씩 로드 해라
-//            val skip = if (responseData.skip + 20 < responseData.total) responseData.skip + 20 else posts.total
-//
-//            /* 네트워크 통신 하는 코드!!!!!! */
-//            withContext(Dispatchers.IO) {
-//                val response = PostsService.getPostsService().posts(skip)
-//
-//                if (response.isSuccessful) {
-//                    posts = response.body()!!
-//                    Log.d("posts", posts.toString())
-//                    //20개가 추가될 시 기존 목록(postList)에 20개의 데이터를 모두 추가(addAll)한다.
-//                   // postList.addAll(posts.posts.toMutableList())
-//
-//                } else {
-//                    Log.d("Error", "${response.message()}")
-//                }
-//            }
-//
-//            adapter.notifyDataSetChanged()  //adapter쪽으로 화면이 변경된 것을 알려준다.
-//            isLoading = false               //상태를 다시 false로 변경하여 로딩 가능하도록 한다.
-//        }
-//    }
 }

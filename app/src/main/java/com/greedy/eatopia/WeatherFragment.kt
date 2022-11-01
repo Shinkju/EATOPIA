@@ -37,9 +37,6 @@ class WeatherFragment : Fragment() {
 
         val v = inflater.inflate(com.greedy.eatopia.R.layout.fragment_weather, container, false)
 
-       /* val tvDate: TextView = v.findViewById(com.greedy.eatopia.R.id.tvDate)
-        weatherRecyclerView = v.findViewById(com.greedy.eatopia.R.id.weatherRecyclerView)
-        var btnRefresh: Button = v.findViewById(com.greedy.eatopia.R.id.btnRefresh)*/
 
         // 리사이클러 뷰 매니저 설정
         binding.weatherRecyclerView.layoutManager = LinearLayoutManager(this.context)
