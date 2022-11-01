@@ -46,9 +46,9 @@ class WeatherAdapter (var items : Array<ModelWeather>) : RecyclerView.Adapter<We
     // 하늘 상태
     fun getSky(sky : String) : String {
         return when(sky) {
-            "1" -> "맑음"
-            "3" -> "구름 많음"
-            "4" -> "흐림"
+            "1" -> "🌞"
+            "3" -> "⛅"
+            "4" -> "☁"
             else -> "오류 rainType : " + sky
         }
     }
