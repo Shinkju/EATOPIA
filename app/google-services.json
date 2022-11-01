@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "77293260793",
+    "project_id": "eatopia-c3711",
+    "storage_bucket": "eatopia-c3711.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:77293260793:android:2b8b0bd81b4f5d410cf728",
+        "android_client_info": {
+          "package_name": "com.greedy.eatopia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "77293260793-5lj522l54h862tpbk4km29dhdjlaq1l7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgxJLsVmox7VKZiO5lT1SvoajuAJ5gRHg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "77293260793-5lj522l54h862tpbk4km29dhdjlaq1l7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -2,8 +2,8 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
 
-    // firebase authentication 관련 plugin 추가
-    //id 'com.google.gms.google-services'
+//     firebase authentication 관련 plugin 추가
+    id 'com.google.gms.google-services'
 }
 
 android {
