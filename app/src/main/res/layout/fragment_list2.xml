@@ -7,11 +7,18 @@
                                                    tools:context=".MainActivity">
     <androidx.recyclerview.widget.RecyclerView
             android:layout_width="416dp"
-            android:layout_height="681dp"
+            android:layout_height="450dp"
             android:id="@+id/postsView"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintVertical_bias="1.0"/>
+    <Button
+            android:text="goLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/goLogin"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/postsView" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.942"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

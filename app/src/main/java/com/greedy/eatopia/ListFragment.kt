@@ -1,5 +1,6 @@
 package com.greedy.eatopia
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -45,6 +46,11 @@ class ListFragment : Fragment() {
             RatingBar.OnRatingBarChangeListener {
                     ratingBar, rating, fromUser ->
             }
+
+        binding.goLogin.setOnClickListener{
+            val intent = Intent(it.context, JoinActivity::class.java)
+            startActivity(intent)
+        }
 
 
         return binding.root
