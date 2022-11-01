@@ -37,7 +37,6 @@ class DetailActivity : AppCompatActivity() {
         binding.btnBack.setOnClickListener {
             finish()
         }
-
     }
 
 
